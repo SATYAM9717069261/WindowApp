@@ -1,0 +1,12 @@
+create database demourl
+CREATE TABLE [dbo].[urls] (
+    [id]        BIGINT         IDENTITY (1, 1) NOT NULL,
+    [url]       VARCHAR (1000) NOT NULL,
+    [CreatedOn] DATETIME       NOT NULL,
+    [ModifyOn]  DATETIME       NOT NULL,
+    [IsActive]  BIT            NOT NULL,
+    [IsDelete]  BIT            NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+insert into urls (url,CreatedOn,ModifyOn,IsActive,IsDelete) values('asnasaks',GETDATE(),GETDATE(),1,0)
